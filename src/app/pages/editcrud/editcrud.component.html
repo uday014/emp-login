@@ -1,0 +1,63 @@
+<div class="main">
+  <div class="text-center pt-2">
+    <h3 class="">
+      <strong> Enter New Data </strong>
+    </h3>
+  </div>
+  <div
+    class="container d-flex align-items-end justify-content-center"
+    style="height: 35%"
+  >
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="fName"
+          placeholder="Enter new email"
+          [(ngModel)]="Name.name"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="lName"
+          placeholder="Enter candidate id"
+          [(ngModel)]="Name.candidate"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="lName"
+          placeholder="Enter your shift"
+          [(ngModel)]="Name.shift"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="lName"
+          placeholder="Enter password"
+          [(ngModel)]="Name.password"
+        />
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="lName"
+          placeholder="Enter confirm password"
+          [(ngModel)]="Name.conpassword"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <button class="btn btn-light mb-3" (click)="addInfo()">Update</button>
+    <button class="btn btn-light mb-3 ms-3" (click)="del()">Clear</button>
+  </div>
+</div>
+<!-- <style>
+        div{
+            border: 1px solid black;
+        }
+    </style> -->

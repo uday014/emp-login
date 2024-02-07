@@ -1,0 +1,54 @@
+<div class="main">
+  <div class="text-center d-flex top">
+    <h1>MEMBERS</h1>
+    <div class="bt">
+      <button class="btn btn-secondary add" mat-button (click)="openDialog()">
+        Add Items
+      </button>
+      <button class="btn btn-secondary add" mat-button>
+        <a style="text-decoration: none; color: white" href="login">Logout</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="text-center p-3">
+    <table class="ms-3" style="width: 90%">
+      <thead class="align-middle"></thead>
+      <tr>
+        <th class="p-3 ms-2" style="border: 1px solid black">Sr</th>
+        <th class="p-3 ms-2" style="border: 1px solid black">Name</th>
+        <th class="p-3 ms-2" style="border: 1px solid black">Candidate id</th>
+        <th class="p-3 ms-2" style="border: 1px solid black; width: 10%">
+          Shift
+        </th>
+        <th class="p-3 ms-2" style="border: 1px solid black; width: 10%">
+          Update
+        </th>
+      </tr>
+      <tr *ngFor="let d of user; let i = index">
+        <th class="p-2 ms-2" style="border: 1px solid grey">{{ i + 1 }}</th>
+        <td class="p-2 ms-2" style="border: 1px solid grey">
+          {{ d.name }}
+        </td>
+        <td class="p-2 ms-2" style="border: 1px solid grey">
+          {{ d.candidate }}
+        </td>
+        <td class="p-2 ms-2" style="border: 1px solid grey">
+          {{ d.shift }}
+        </td>
+        <td class="p-2 ms-2" style="border: 1px solid grey">
+          <button class="btn btn-del">
+            <i (click)="edit(d)" class="fa-regular fa-pen-to-square"></i
+            >&nbsp;&nbsp;
+            <i (click)="condel(d._id)" class="fa-solid fa-trash"></i>
+          </button>
+        </td>
+        <!-- <td class="p-2 ms-2" style="border: 1px solid grey">
+          <button class="btn btn-del">
+            <i (click)="del(d._id)" class="fa-solid fa-trash"></i>
+          </button>
+        </td> -->
+      </tr>
+    </table>
+  </div>
+</div>
